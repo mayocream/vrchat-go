@@ -1,4 +1,4 @@
-module github.com/mayocream/vrchat
+module github.com/mayocream/vrchat-go
 
 go 1.23.1
 
