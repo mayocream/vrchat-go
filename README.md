@@ -34,7 +34,6 @@ func main() {
 
 	println("logged in as ", user.DisplayName)
 }
+```
 
 Read full example [here](examples/main.go).
-
-```
