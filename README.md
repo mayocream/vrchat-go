@@ -12,14 +12,29 @@ A Go client to interact with the unofficial VRChat API. Supports all REST calls 
 
 ## Getting Started
 
-import the library
-
 ```go
-import "github.com/mayocream/vrchat-go"
-```
+package main
 
-Create a new client
+import (
+	"github.com/mayocream/vrchat-go"
+)
 
-```go
-client := vrchat.NewClient("https://vrchat.com/api/1")
+func main() {
+	client := vrchat.NewClient("https://vrchat.com/api/1")
+
+	err := client.Authenticate("username", "password", "totp")
+	if err != nil {
+		panic(err)
+	}
+
+	user, err := client.GetCurrentUser()
+	if err != nil {
+		panic(err)
+	}
+
+	println("logged in as ", user.DisplayName)
+}
+
+Read full example [here](examples/main.go).
+
 ```
