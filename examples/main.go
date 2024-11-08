@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	client := vrchat.NewClient("https://vrchat.com/api/1")
+	client := vrchat.NewClient("https://api.vrchat.cloud/api/1")
 
 	err := client.Authenticate("username", "password", "totp")
 	if err != nil {
